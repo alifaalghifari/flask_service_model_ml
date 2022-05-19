@@ -53,6 +53,14 @@ def result_model():
             name = 'BrownSpot'
         else:
             name = 'Hispa'
+
+        # return json 
+        # response_json = {
+        #     name : name
+        # }
+        # return jsonify(response_json)
+
+        # return web
         return render_template('resultModel.html', training=str(classes), hasil=str(result), nama=name )
 if __name__ == '__main__':
     app.run(debug=True)
