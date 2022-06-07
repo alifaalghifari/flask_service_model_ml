@@ -16,6 +16,21 @@
     <h3>Nama</h3>
     <h4>{{nama}}</h4>
 
+    {% for r in recommend.nama %}
+    <!-- {% for n in r.kegunaan %}
+        <p>{{n}}</p>
+    {% endfor %} -->
+    {{r}}
+    <br>
+    {% endfor %}
+    {% for r in recommend.product_link %}
+        <!-- {% for n in r.kegunaan %}
+            <p>{{n}}</p>
+        {% endfor %} -->
+        <a href={{r}}>{{r}}</a>
+        <br>
+    {% endfor %}
+
     <a href="{{ url_for('index') }}">Ulangi</a>
 </body>
 
