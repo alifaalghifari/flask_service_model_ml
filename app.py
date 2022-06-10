@@ -32,7 +32,8 @@ def cleaning_data(data):
     # pesticede_image = data.image_src.to_json()
 
     clean_data = []
-    for i in range(len(data)) :
+
+    for i in range(len(pesticide_name)) :
         temporary_data = {}
         temporary_data['nama'] = pesticide_name[i]
         temporary_data['image_src'] = pesticide_image[i]
@@ -62,6 +63,7 @@ def recommend_pestisida_name(pesticide_name):
     rec = df[['nama', 'kegunaan', 'tempat',
               'berat', 'image_src', 'product_link']].iloc[pesticide_indices]
 
+    
     cleaning = cleaning_data(rec)
 
     return jsonify(recommendations = cleaning)
