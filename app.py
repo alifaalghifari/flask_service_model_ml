@@ -129,11 +129,11 @@ def result_model():
 
         # ['LeafBlast', 'Healthy', 'BrownSpot', 'Hispa']
         if result == 0:
-            disease = 'LeafBlast'
+            disease = 'Leaf Blast'
         elif result == 1:
             disease = 'Healthy'
         elif result == 2:
-            disease = 'BrownSpot'
+            disease = 'Brown Spot'
         else:
             disease = 'Hispa' 
             
